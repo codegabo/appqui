@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Appqui</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- animate -->
+    <link href="css/animate.css" rel="stylesheet">
+    <!-- font-awesome -->
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <!-- mis estilos -->
+    <link href="css/conponentes.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/typeAhead.css" rel="stylesheet" type="text/css" />
+    <link href="css/bootstrap-datepicker.min.css" rel="stylesheet">
+
+
+</head>
+
+<body class="bg-1">
+    <div class="modalLoading" style="display: none">
+        <div class="centerModalLoading">
+            <img alt="" src="img/loading.svg" />
+            <div style="text-align:center;">
+                Cargando...
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-3">
+                    <a id="back" href="">
+                        <!-- <span class="glyphicon glyphicon-menu-left form-control-feedback-menu" aria-hidden="true"></span> -->
+                        <i class="fa fa-chevron-left" style="padding-top: 15px;"></i>
+                    </a>
+                </div>
+                <div class="col-xs-6">
+                    <h1>Perfil Usuario</h1>
+                </div>
+                <div class="col-xs-3">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <a id="btnMenu" href="#">
+                        <img id="profilePic" class="pull-right mt-5 wow fadeInRight" data-wow-delay=".5s" src="img/picture.png" alt="" data-toggle="offcanvas">
+                    </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Menu -->
+<div id="wrapper">
+<div class="overlay"></div>
+<nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
+<ul class="nav sidebar-nav">
+<li class="sidebar-brand">
+<a href="#">Menú</a>
+</li>
+<li>
+<a href="inicio.html">Inicio<p class="flecha">></p></a>
+</li>
+<li class="menuActive">
+<a href="perfil-usuario.html">Perfil<p class="flecha">></p></a>
+</li>
+ <!-- <li class="menuActive">
+<a href="#">Favoritos<p class="flecha">></p></a>
+</li>
+<li class="menuActive">
+<a href="#">Me gusta<p class="flecha">></p></a>
+</li>-->
+<li class="menuActive">
+<a id="btnLogOut" href="">Cerrar sesión<p class="flecha">></p></a>
+</li>
+<li class="menuInactive">
+<a href="login.html">Iniciar sesión<p class="flecha">></p></a>
+</li>
+<div class="alertagps">
+<img src="img/Marcador.png" >
+<p>Apaga tu GPS cuando no uses APPQUI, de esta manera no gastaras los datos de tu dispositivo</p><br>
+<div id="enlaces">
+<a href="https://www.facebook.com/appquicol/"><img src="img/fb.png" id="fb"></a>
+<a href="https://twitter.com/AppquiColombia"><img src="img/tw.png" id="tw"></a>
+<a href="http://www.appquicol.com/"><img src="img/web.png" id="web"></a>
+<a href="mailto:info@appquicol.com"><img src="img/mail.png" id="mail"></a>
+</div>
+</div>
+</ul>
+</nav>
+</div>
+<!-- fin Menu -->
+    <div class="modalLoading" style="display: none">
+        <div class="centerModalLoading">
+            <img alt="" src="img/loading.svg" />
+            <div style="text-align:center;">
+                Cargando...
+            </div>
+        </div>
+    </div>
+    <!-- contenedor -->
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <form action="" class="login login-usuario mt-50">
+                    <div class="foto-perfil mv-20 wow fadeInLeft" data-wow-delay="1.1s">
+                        <p class="text-gris-claro">Imagen de perfil</p>
+                        <div class="imagen">
+                            <a id="CapturePhoto">
+                                <i class="camara glyphicon glyphicon-camera">
+                            </i>
+                            </a>
+                            <!--<button id="CapturePhoto" class="camara glyphicon glyphicon-camera"></button>-->
+                            <img id="ProfileImage">
+                            <a id="CaptureFromGallery">
+                                <i class="galeria glyphicon glyphicon-picture">
+                            </i>
+                            </a>
+                            <!--<button id="CaptureFromGallery" class="galeria glyphicon glyphicon-picture"></button>-->
+                        </div>
+                    </div>
+                    <div class="form-group wow fadeInLeft" data-wow-delay="1.2s">
+                        <div class="input-group">
+                            <input id="txtName" type="text" class="form-control" placeholder="Nombres">
+                        </div>
+                    </div>
+                    <div class="form-group wow fadeInLeft" data-wow-delay="1.3s">
+                        <div class="input-group">
+                            <input id="txtLastName" type="text" class="form-control" placeholder="Apellidos">
+                        </div>
+                    </div>
+                    <div class="form-group wow fadeInLeft" data-wow-delay="1.4s">
+                        <div class="input-group">
+                            <input id="txtUser" type="text" class="form-control" placeholder="Usuario" disabled>
+                        </div>
+                    </div>
+                    <div class="form-group wow fadeInLeft" data-wow-delay="1.4s">
+                        <div class="input-group">
+                            <input id="txtEmail" type="text" class="form-control" placeholder="Correo electronico">
+                        </div>
+                    </div>
+                    <div class="form-group wow fadeInLeft" data-wow-delay="1.5s">
+                        <div class="input-group">
+                            <!--<input type="text" class="form-control" placeholder="Ciudad de origen">-->
+                            <datalist id="Cities"></datalist>
+                            <input id="entity" type="text" class="typeahead tt-query" placeholder="Ciudad" autocomplete="off" spellcheck="false" dir="auto">
+                        </div>
+                    </div>
+                    <div class="form-group wow fadeInLeft" data-wow-delay="1.7s">
+                        <div class="input-group">
+                            <!--<input type="text" class="form-control" placeholder="Genero">-->
+                            <select name="slider" id="selGenre" class="form-control">
+                                <option value="Masculino">Masculino</option>
+                                <option value="Femenino">Femenino</option>
+                            </select>
+                        </div>
+                    </div>
+            </div>
+            <div class="form-group wow fadeInLeft" data-wow-delay="1.8s">
+                <div class="input-group">
+                    <!--<input type="date" class="form-control" placeholder="Fecha de nacimiento">-->
+                    <div id="sandbox-container">
+                        <input id="txtDate" type="text" class="form-control" data-date-end-date="0d" placeholder="Fecha Nacimiento">
+                    </div>
+                </div>
+                <!--<div class="form-group wow fadeInLeft" data-wow-delay="1.9s">-->
+                <!--<div class="input-group">-->
+                <!--<input id="txtPass" type="password" class="form-control" placeholder="Contraseña">-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--<div class="form-group wow fadeInLeft" data-wow-delay="1.8s">-->
+                <!--<div class="input-group">-->
+                <!--<a id="back" href="perfil-usuario.html">-->
+                <!--<p class="text-gris-claro">Cambiar contraseña</p>-->
+                <!--</a>-->
+                <!--</div>-->
+                <!--</div>-->
+                </form>
+            </div>
+        </div>
+        <div class="row mt-30">
+            <div class="col-xs-4 col-xs-4">
+                <div id="btnRegister" class="btn btn-primary mb-30 wow fadeInUp" data-wow-delay="2.1s">Guardar</div>
+            </div>
+            <div class="col-xs-3 col-xs-3">
+                <a id="back" href="cambiar_contrasena.html">
+                    <p class="text-gris-claro">Cambiar contraseña</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- fin contenedor -->
+    <!-- jQuery  -->
+    <script type="text/javascript" src="js/jquery-2.1.1.js"></script>
+    <!-- Bootstrap -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/bootbox.min.js"></script>
+    <!-- wow -->
+    <script type="text/javascript" src="js/wow.min.js"></script>
+    <!-- velocity -->
+    <script type="text/javascript" src="js/velocity.min.js"></script>
+    <!-- Mis Scripts -->
+    <script src="js/bootstrap-datepicker16.js"></script>
+    <script src="js/bootstrap-datepicker.es.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/config.js"></script>
+    <script type="text/javascript" src="scripts/c_updateProfile.js"></script>
+    <script type="text/javascript" src="scripts/menu.js"></script>
+    <script type="text/javascript" src="js/typeahead.min.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+
+
+
+    <script src="js/jquery-2.1.1.js"></script>
+    <!-- wow -->
+    <script src="js/wow.min.js"></script>
+    <!-- velocity -->
+    <script src="js/velocity.min.js"></script>
+    <!-- Mis Scripts -->
+    <script type="text/javascript" src="scripts/c_inicio.js"></script>
+    <script type="text/javascript" src="scripts/menu.js"></script>
+
+</body>
+
+
+</html>

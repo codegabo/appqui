@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<title>AppQui</title>
+<!-- Bootstrap -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<!-- animate -->
+<link href="css/animate.css" rel="stylesheet">
+<!-- font-awesome -->
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<!-- mis estilos -->
+<link href="css/conponentes.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+</head>
+
+<body class="bg-1">
+<div class="loading"></div>
+<nav class="navbar navbar-default">
+<div class="container-fluid">
+<div class="row">
+<div class="col-xs-12">
+<a id="btnMenu" href="#">
+    <iframe src="http://www.appquicol.com/publicidad/1.jpg" id="bannerIframe"></iframe><img id="profilePic" class="pull-right mt-5 wow fadeInRight" data-wow-delay=".5s" src="img/picture.png" alt="" data-toggle="offcanvas">
+</a>
+</div>
+</div>
+</div>
+</nav>
+<!-- Menu -->
+<div id="wrapper">
+<div class="overlay"></div>
+<nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
+<ul class="nav sidebar-nav">
+<li class="sidebar-brand">
+<a href="#">Menú</a>
+</li>
+<li>
+<a href="inicio.html">Inicio<p class="flecha">></p></a>
+</li>
+<li class="menuActive">
+<a href="perfil-usuario.html">Perfil<p class="flecha">></p></a>
+</li>
+ <!-- <li class="menuActive">
+<a href="#">Favoritos<p class="flecha">></p></a>
+</li>
+<li class="menuActive">
+<a href="#">Me gusta<p class="flecha">></p></a>
+</li>-->
+<li class="menuActive">
+<a id="btnLogOut" href="">Cerrar sesión<p class="flecha">></p></a>
+</li>
+<li class="menuInactive">
+<a href="login.html">Iniciar sesión<p class="flecha">></p></a>
+</li>
+<div class="alertagps">
+<img src="img/Marcador.png" >
+<p>Apaga tu GPS cuando no uses APPQUI, de esta manera no gastaras los datos de tu dispositivo</p><br>
+    <iframe src="http://www.appquicol.com/publicidad/1.jpg" id="bannerMenuIframe"></iframe>
+
+    <div id="enlaces">
+<a href="https://www.facebook.com/appquicol/"><img src="img/fb.png" id="fb"></a>
+<a href="https://twitter.com/AppquiColombia"><img src="img/tw.png" id="tw"></a>
+<a href="http://www.appquicol.com/"><img src="img/web.png" id="web"></a>
+<a href="mailto:info@appquicol.com"><img src="img/mail.png" id="mail"></a>
+</div>
+</div>
+</ul>
+</nav>
+</div>
+<!-- fin Menu -->
+<!-- contenedor -->
+<div class="container">
+<div class="row">
+<div class="col-xs-8 col-xs-offset-2">
+<img class="center-block wow fadeInUp" data-wow-delay="1s" src="img/logo-buscador1.png" alt="">
+</div>
+</div>
+<div class="row">
+<div class="col-xs-10 col-xs-offset-1">
+<form action="javascript:btnSearch()" class="login mb-30"  autocomplete="off">
+<div class="form-group" >
+<div class="input-group">
+<input id="txtSearch" type="text" class="form-control" placeholder="¿Que estas buscando?">
+</div>
+</div>
+<div class="form-group">
+<div class="input-group">
+<select id="cboCategories" class="form-control" id="select1">
+<option>Categoria</option>
+<option>Belleza</option>
+<option>Comercio</option>
+<option>Comidas</option>
+<option>Cultura</option>
+<option>Deporte</option>
+<option>Hoteleria</option>
+<option>Mecanica</option>
+<option>Salud</option>
+<option>Turismo</option>
+<option>Recreación</option>
+</select>
+</div>
+</div>
+<div class="form-group">
+<div class="input-group">
+<select id="cboMunicipio" class="form-control" id="select2">
+<option value="0">Girardot</option>
+<!-- <option value="1">Melgar</option> 
+<option value="2">Girardot</option> -->
+</select>
+</div>
+</div>
+</form>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-6 col-xs-offset-3">
+<a id="btnSearch" href="#" >
+<div class="btn btn-primary center-block mb-30">Buscar &nbsp;<span class="glyphicon glyphicon-search" aria-hidden="true"></span></div>
+</a>
+<!--<a href="trifacico.html">-->
+<!--<div class="btn btn-primary center-block mb-30">Plan Trifacico</div>-->
+<!--</a>-->
+<a id="promociones" href="promociones.html">
+<div class="btn btn-primary center-block mb-30">Promociones</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- fin contenedor -->
+<!-- jQuery  -->
+<script src="js/jquery-2.1.1.js"></script>
+<!-- Bootstrap -->
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/bootbox.min.js"></script>
+<!-- wow -->
+<script src="js/wow.min.js"></script>
+<!-- velocity -->
+<script src="js/velocity.min.js"></script>
+<!-- Mis Scripts -->
+<script src="js/main.js"></script>
+<script type="text/javascript" src="js/config.js"></script>
+<script type="text/javascript" src="scripts/c_inicio.js"></script>
+<script type="text/javascript" src="scripts/menu.js"></script>
+
+</body>
+
+</html>

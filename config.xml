@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.appqui.appqui" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>Appqui</name>
+    <description>
+        Buscador de productos, servicios y establecimientos en Cundinamarca, que te permite visualizar catalogo de productos y trazar una ruta geográfica desde tu posición actual hasta la posición exacta del establecimiento al que deseas ir o donde se encuentra el producto o servicio que estas buscando, vive las experiencias mas gratas usando la función PLAN TRIFÁSICO, el plan trifásico te permite digital un monto de dinero, luego te mostrara que actividades o productos puedes disfrutar en tema Turístico, Gastronómico y Recreativo para la familia, todo esto abarcando la cantidad de dinero que ingresaste, - Cada vez que visites Cundinamarca y no tengas planeado donde pasar la noche, que comer o que actividades realizar, ¡no te preocupes!, ¡Somos lo que Buscas!.
+    </description>
+    <author email="info@appquicol.com" href="http://www.appquicol.com/">
+        Appqui
+    </author>
+    <preference name='phonegap-version' value='cli-6.5.0' />
+    <preference name="orientation" value="landscape" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <content src="index.html" />
+    <access origin="*" />
+</widget>

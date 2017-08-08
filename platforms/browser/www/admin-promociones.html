@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AppQui</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- animate -->
+    <link href="css/animate.css" rel="stylesheet">
+    <!-- font-awesome -->
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <!-- normalize -->
+    <!-- <link href="css/normalize.css" rel="stylesheet"> -->
+    <!-- mis estilos -->
+    <link href="css/conponentes.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body class="bg-1">
+    <div class="modalLoading" style="display: none">
+        <div class="centerModalLoading">
+            <img alt="" src="img/loading.svg" />
+            <div style="text-align:center;">
+                Cargando...
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-3">
+                   <a href="inicio.html">
+<i class="fa fa-chevron-left fa-2x" style="padding-top:10px;"></i>
+</a>
+                </div>
+                <div class="col-xs-6">
+                    <h1>Promociones</h1>
+                </div>
+                <div class="col-xs-3">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <a id="btnMenu" href="#">
+                                <img id="profilePic" class="pull-right mt-5 wow fadeInRight" data-wow-delay=".5s" src="img/picture.png" alt="" data-toggle="offcanvas">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Menu -->
+    <div id="wrapper">
+        <div class="overlay"></div>
+        <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
+            <ul class="nav sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">Menú</a>
+                </li>
+                <li>
+                    <a href="inicio3.html">Inicio<p class="flecha">></p></a>
+                </li>
+                <li class="menuActive">
+                    <a href="perfil-negocio.html">Perfil<p class="flecha">></p></a>
+                </li>
+              <!--  <li class="menuActive">
+                    <a href="#">Favoritos<p class="flecha">></p></a>
+                </li>
+                <li class="menuActive">
+                    <a href="#">Me gusta<p class="flecha">></p></a>
+                </li> -->
+                <li class="menuActive">
+                    <a id="btnLogOut" href="">Cerrar sesión<p class="flecha">></p></a>
+                </li>
+                <li class="menuInactive">
+                    <a href="login.html">Iniciar sesión<p class="flecha">></p></a>
+                </li>
+                <div class="alertagps">
+<img src="img/Marcador.png" >
+<p>Apaga tu GPS cuando no uses APPQUI, de esta manera no gastaras los datos de tu dispositivo</p><br>
+<div id="enlaces">
+<a href="https://www.facebook.com/appquicol/"><img src="img/fb.png" id="fb"></a>
+<a href="https://twitter.com/AppquiColombia"><img src="img/tw.png" id="tw"></a>
+<a href="http://www.appquicol.com/"><img src="img/web.png" id="web"></a>
+<a href="mailto:info@appquicol.com"><img src="img/mail.png" id="mail"></a>
+</div></div>
+            </ul>
+        </nav>
+    </div>
+    <!-- fin Menu -->
+    <!-- contenedor -->
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+                <ul id="lstPromo" class="promo mt-20">
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- fin contenedor -->
+    <div class="mv-40"></div>
+    <!-- jQuery  -->
+    <script type="text/javascript" src="js/jquery-2.1.1.js"></script>
+    <!-- Bootstrap -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- wow -->
+    <script type="text/javascript" src="js/wow.min.js"></script>
+    <!-- velocity -->
+    <script type="text/javascript" src="js/velocity.min.js"></script>
+    <!-- Mis Scripts -->
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/config.js"></script>
+    <script type="text/javascript" src="js/moment.js"></script>
+    <script type="text/javascript" src="scripts/c_admin-promotions.js"></script>
+    <script type="text/javascript" src="scripts/menu.js"></script>
+</body>
+
+</html>

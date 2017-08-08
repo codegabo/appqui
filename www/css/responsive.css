@@ -1,0 +1,26 @@
+@media screen and (min-width: 768px) {
+    ul.resultados>li .imagen {
+        width: 20%;
+    }
+    ul.resultados>li .descripcion {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .productos .corazon {
+    	min-width: 40px;
+    }
+    .productos .text {
+        font-size: 28px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .productos .corazon {
+    	min-width: 40px;
+    }
+    .productos .text {
+        font-size: 18px;
+    }
+}

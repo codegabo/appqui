@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <title>Appqui</title>
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <!-- animate -->
+        <link href="css/animate.css" rel="stylesheet">
+        <!-- font-awesome -->
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <!-- mis estilos -->
+        <link href="css/conponentes.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body class="bg-1">
+    <div class="loading"></div>
+    <!-- contenedor -->
+    <div class="container">
+        <div class="Absolute-Center wow fadeIn" data-wow-delay=".7s">
+            <img class="img-responsive center-block blend" src="img/logo-buscador1.png" alt="">
+            <img class="img-responsive center-block blend" src="img/gobernacion.png" alt="">
+            <p style="text-align: justify; margin-top: 15px;">Esta aplicación ha sido desarrollada en el marco del convenio SCTeI 021 de 2014, denominado “Construcción
+                del Ecosistema de Innovación TIC en el departamento de Cundinamarca”.
+        </div>
+    </div>
+    <!-- fin contenedor -->
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">Registrarse como:</h4>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <a href="registrarse-usuario.html">
+                                    <button type="button" class="btn center-block btn-block btn-primary mv-10">Usuario
+                                        Appqui
+                                    </button>
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <button type="button" class="btn btn-block btn-primary mv-10" data-dismiss="modal">Registrar
+                                    mi Establecimiento
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- jQuery  -->
+    <script src="js/jquery-2.1.1.js"></script>
+    <!-- Bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- wow -->
+    <script src="js/wow.min.js"></script>
+    <!-- velocity -->
+    <script src="js/velocity.min.js"></script>
+    <!-- Mis Scripts -->
+    <script src="js/main.js"></script>
+    <!--Script Index-->
+    <script type="text/javascript">
+        $(document).on('ready', cargado);
+        function cargado() {
+            timer = setTimeout('temporizador()', 4000);
+        }
+        $(window).on("orientationchange", function (event) {
+            var ventana_ancho = $(window).width();
+            var ventana_alto = $(window).height();
+            //Temporizador
+            timer = setTimeout('temporizador()', 2000);
+        });
+        function temporizador() {
+            /******************** Read config.xml **********************************************************************/
+            // var urlServices = "http://www.appquicol.com/WebService/api/";
+            // var urlServices2 = "http://www.appquicol.com/WebService";
+            // var token = 'CED15CC29ABDF6A72D28DE8C3C39F';
+            // window.localStorage.setItem('urlServices', urlServices);
+            // window.localStorage.setItem('urlServices2', urlServices2);
+            // window.localStorage.setItem('token', token);
+            /*******************************************************************************************************************************/
+            var count = window.localStorage.length;
+            if (window.localStorage.getItem('active') === 'false' || window.localStorage.getItem('active') === null) {
+                window.location = 'inicio.html';
+            }
+            else{
+                window.location = 'inicio.html';
+            }
+        }
+    </script>
+
+
+
+        <script type="text/javascript" src="cordova.js"></script>
+    </body>
+</html>

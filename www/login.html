@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AppQui</title>
+<!-- Bootstrap -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<!-- animate -->
+<link href="css/animate.css" rel="stylesheet">
+<!-- font-awesome -->
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<!-- mis estilos -->
+<link href="css/conponentes.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+</head>
+
+<body class="bg-1">
+<div class="modalLoading" style="display: none">
+
+<div class="centerModalLoading">
+<img alt="" src="img/loading.svg"/>
+<div style="text-align:center;">
+Cargando...
+</div>
+</div>
+</div>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-3">
+                <a onclick="goBack()">
+                    <i class="fa fa-chevron-left fa-2x" style="padding-top:10px;"></i>
+                </a>
+            </div>
+            <div class="col-xs-9">
+                <a id="btnMenu" href="#">
+                    <img id="profilePic" class="pull-right mt-5 wow fadeInRight" data-wow-delay=".5s" src="img/picture.png" alt="" data-toggle="offcanvas">
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>
+<!-- contenedor -->
+<div class="container">
+<div class="row">
+<div class="col-xs-10 col-xs-offset-1">
+<div class="logo mt-60 wow fadeInDown" data-wow-delay=".3s">
+<img class="img-responsive center-block " src="img/logo-buscador1.png" alt="" >
+</div>
+<form action="" class="login">
+<div class="form-group wow fadeInUp" data-wow-delay="1s">
+<div class="input-group">
+<input id="txtusername" type="text" class="form-control" placeholder="Usuario">
+</div>
+</div>
+<div class="form-group wow fadeInUp" data-wow-delay="1.3s">
+<div class="input-group">
+<input id="txtpassword" type="password" class="form-control" placeholder="Contraseña">
+</div>
+</div>
+
+<div class="checkbox wow fadeInUp" data-wow-delay="1.9s">
+<input style="visibility:hidden" id="box1" type="checkbox"/>
+<label style="visibility:hidden" for="box1"><span>Recordarme</span></label>
+</div>
+</form>
+<a id="loading" href="#">
+<div id="btnLogin" class="btn btn-block btn-primary mv-10 wow fadeInUp" data-wow-delay="2.5s">Entrar
+</div>
+</a>
+<a href="" data-toggle="modal" data-target="#myModal">
+<div class="btn btn-block btn-primary mv-10 wow fadeInUp" data-wow-delay="3s">Registrarse</div>
+</a>
+<a href="olvido_contrasena.html">
+<div class="btn btn-link btn-block mv-10 wow fadeIn" data-wow-delay="3.5s">¿Olvidó su contraseña?</div>
+</a>
+</div>
+</div>
+</div>
+<!-- fin contenedor -->
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+
+<div class="modal-body">
+<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+aria-hidden="true">&times;</span>
+</button>
+<h4 class="modal-title" id="myModalLabel">Registrarse como:</h4>
+<div class="">
+<div class="row">
+<div class="col-xs-12">
+<a href="registrarse-usuario.html">
+<button type="button" class="btn center-block btn-block btn-primary mv-10">Usuario Appqui
+</button>
+</a>
+</div>
+
+</div>
+<div class="row">
+<div class="col-xs-12">
+<a href="registrar-negocio.html">
+<button id="btnRegister" type="button" class="btn btn-block btn-primary mv-10">Registrar mi Establecimiento
+</button>
+</a>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- jQuery  -->
+<script type="text/javascript" src="js/jquery-2.1.1.js"></script>
+<!-- Bootstrap -->
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/bootbox.min.js"></script>
+<!-- wow -->
+<script type="text/javascript" src="js/wow.min.js"></script>
+<!-- velocity -->
+<script type="text/javascript" src="js/velocity.min.js"></script>
+<!-- Mis Scripts -->
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/config.js"></script>
+<script type="text/javascript" src="scripts/c_login.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+$("form").keypress(function(e) {
+if (e.which == 13) {
+return false;
+}
+});
+});
+</script>
+</body>
+</html>

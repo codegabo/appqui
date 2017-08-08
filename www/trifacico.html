@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AppQui</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- animate -->
+    <link href="css/animate.css" rel="stylesheet">
+    <!-- font-awesome -->
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <!-- normalize -->
+    <!-- <link href="css/normalize.css" rel="stylesheet"> -->
+    <!-- mis estilos -->
+    <link href="css/conponentes.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body class="bg-1">
+<div class="modalLoading" style="display: none">
+    <div class="centerModalLoading">
+        <img alt="" src="img/loading.svg"/>
+        <div style="text-align:center;">
+            Cargando...
+        </div>
+    </div>
+</div>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-2">
+               <a href="inicio.html">
+<i class="fa fa-chevron-left fa-2x" style="padding-top:10px;"></i>
+</a>
+            </div>
+            <div class="col-xs-6">
+                <h1>Plan trifacico</h1>
+            </div>
+            <div class="col-xs-4">
+                <div class="row">
+                    <div id="sesionInactive" class="col-xs-12">
+                      <a id="btnMenu" href="#">
+                        <img id="profilePic" class="pull-right mt-5 wow fadeInRight" data-wow-delay=".5s" src="img/picture.png" alt="" data-toggle="offcanvas">
+                    </a>
+                    
+                    
+                </div>
+                <div id="sesionActive" style="display: none;">
+                    <div class="col-sm-4">
+                         <img id="profilePic" class="pull-right mt-5 mr-5 wow fadeInRight" data-wow-delay=".5s" src="" alt="">
+                    </div>
+                    <div class="col-sm-8">
+                        
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<!-- Menu -->
+    <div id="wrapper">
+        <div class="overlay"></div>
+        <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
+            <ul class="nav sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">Menú</a>
+                </li>
+                <li>
+                    <a href="inicio.html">Inicio</a>
+                </li>
+                <li class="menuActive">
+                    <a href="perfil-negocio.html">Perfil<p class="flecha">></p></a>
+                </li>
+                <!--  <li class="menuActive">
+                    <a href="#">Favoritos<p class="flecha">></p></a>
+                </li>
+                <li class="menuActive">
+                    <a href="#">Me gusta<p class="flecha">></p></a>
+                </li>-->
+                <li class="menuActive">
+                    <a id="btnLogOut" href="">Cerrar sesión<p class="flecha">></p></a>
+                </li>
+                <li class="menuInactive">
+                    <a href="login.html">Iniciar sesión<p class="flecha">></p></a>
+                </li>
+                <div class="alertagps">
+<img src="img/Marcador.png" >
+<p>Apaga tu GPS cuando no uses APPQUI, de esta manera no gastaras los datos de tu dispositivo</p><br>
+<div id="enlaces">
+<a href="https://www.facebook.com/appquicol/"><img src="img/fb.png" id="fb"></a>
+<a href="https://twitter.com/AppquiColombia"><img src="img/tw.png" id="tw"></a>
+<a href="http://www.appquicol.com/"><img src="img/web.png" id="web"></a>
+<a href="mailto:info@appquicol.com"><img src="img/mail.png" id="mail"></a>
+</div>
+</div>
+            </ul>
+        </nav>
+    </div>
+    <!-- fin Menu -->
+<nav id="navSearch" class="navbar navbar-default divCenter" style="box-shadow: none;">
+    <div class="container">
+        <form action="" class="login mv-5">
+            <div class="row">
+                <div class="col-xs-5">
+                    <h4 class="text-gris text-center wow fadeInLeft" data-wow-delay="1s">Presupuesto</h4>
+                </div>
+                <div class="col-xs-7">
+                    <div class="row">
+                        <div class="form-group wow fadeInRight" data-wow-delay="1s">
+                            <div class="input-group">
+                                <div class="col-xs-7">
+                                    <input id="txtSearch" type="text" class="form-control" placeholder="ej. $ 70.000">
+                                    <!--<span class="glyphicon glyphicon-search form-control-feedback"-->
+                                    <!--aria-hidden="true"></span>-->
+                                </div>
+                                <div class="col-xs-5">
+                                    <!--<div class="mt-5 mr-10 btn btn-primary wow fadeInRight"-->
+                                    <!--data-wow-delay="0s">-->
+                                    <!--Cerrar sesión-->
+                                    <!--</div>-->
+                                    <button id="btnSearch" type="button"
+                                            class="mt-5 mr-10 btn btn-primary wow fadeInRight">
+                                        <span class="glyphicon glyphicon-search"></span> Buscar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</nav>
+<div id="divContainer" class="container mt-10">
+    <div class="container wow fadeInUp" data-wow-delay="1.0s">
+        <div class="row">
+            <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+                <h1 class="text-center text-azul-claro">Plan trifacico</h1>
+                <!--<h1 class="text-center text-azul-claro">Horarios disponibles</h1>-->
+                <h1 id="lblEst1_1" class="text-left">Establecimiento 1</h1>
+                <div class="row">
+                    <div class="col-xs-8 col-sm-8">
+                        <div class="trifacico wow fadeInUp">
+                            <img id="imgEst1" src="img/trifacico-gastronomia.jpg" alt="" class="img-responsive2">
+                            <div class="titulo">
+                                <p id="lblEst1">Establecimiento 1</p>
+                                <p>Gastronomía</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-4 col-sm-4">
+                        <div class="trifacico wow fadeInUp">
+                            <h1 class="text-left">Descripción</h1>
+                            <span id="lblDesc1_1" class="text-gris"></span>
+                            <h1 class="text-left">Horario</h1>
+                            <span id="lblHour1_1" class="text-gris">Lunes - Viernes: 08:00 am - 04:00 pm</span>
+                        </div>
+                    </div>
+                </div>
+                <h1 class="text-left">Incluye</h1>
+                <ul id="lstInclude1_1" class="plan-trifacico">
+                    <li>Lorem ipsum dolor sit amet, consectetur.</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur.</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur.</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur.</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur.</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur.</li>
+                </ul>
+                <h1 class="text-left">Ubicación</h1>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+                        <div id="mapG" class="mapa"></div>
+                    </div>
+                </div>
+                <!--<div id="map" style="width: 500px;height: 500px;"></div>-->
+                <!--<section class="mapaG">-->
+                    <!--<div id="mapG"></div>-->
+                <!--</section>-->
+                <hr style="border-color: #9e9e9e !important;">
+                <!--<br>-->
+                <!--<span class="text-gris">Sabados - Domingo: 08:00 am - 02:00 pm</span>-->
+                <h1 id="lblEst2_1" class="text-left">Establecimiento 2</h1>
+                <div class="row">
+                    <div class="col-xs-8 col-sm-8">
+                        <div class="trifacico wow fadeInUp">
+                            <img id="imgEst2" src="img/trifacico-turismo.jpg" alt="" class="img-responsive2">
+                            <div class="titulo">
+                                <p id="lblEst1">Establecimiento 1</p>
+                                <p>Turismo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-4 col-sm-4">
+                        <div class="trifacico wow fadeInUp">
+                            <h1 class="text-left">Descripción</h1>
+                            <span id="lblDesc2_1" class="text-gris"></span>
+                            <h1 class="text-left">Horario</h1>
+                            <span id="lblHour2_1" class="text-gris">Lunes - Viernes: 08:00 am - 04:00 pm</span>
+                        </div>
+                    </div>
+                </div>
+                <h1 class="text-left">Incluye</h1>
+                <ul id="lstInclude2_1" class="plan-trifacico">
+                    <li>Lorem ipsum dolor sit amet, consectetur.</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur.</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur.</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur.</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur.</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur.</li>
+                </ul>
+                <h1 class="text-left">Ubicación</h1>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+                        <div id="mapG2" class="mapa"></div>
+                    </div>
+                </div>
+                <hr style="border-color: #9e9e9e !important;">
+                <!--<br>-->
+                <!--<span class="text-gris">Sabados - Domingo: 08:00 am - 02:00 pm</span>-->
+                <h1 id="lblEst3_1" class="text-left">Establecimiento 3</h1>
+                <div class="row">
+                    <div class="col-xs-8 col-sm-8">
+                        <div class="trifacico wow fadeInUp">
+                            <img id="imgEst3" src="img/trifacico-recreacion.jpg"  alt="" class="img-responsive2">
+                            <div class="titulo">
+                                <p id="lblEst1">Establecimiento 1</p>
+                                <p>Recreación</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-4 col-sm-4">
+                        <div class="trifacico wow fadeInUp">
+                            <h1 class="text-left">Descripción</h1>
+                            <span id="lblDesc3_1" class="text-gris"></span>
+                            <h1 class="text-left">Horario</h1>
+                            <span id="lblHour3_1" class="text-gris">Lunes - Viernes: 08:00 am - 04:00 pm</span>
+                        </div>
+                    </div>
+                </div>
+                <h1 class="text-left">Incluye</h1>
+                <ul id="lstInclude3_1" class="plan-trifacico">
+                    <li>Lorem ipsum dolor sit amet, consectetur.</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur.</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur.</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur.</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur.</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur.</li>
+                </ul>
+                <h1 class="text-left">Horario</h1>
+                <span id="lblHour3_1" class="text-gris">Lunes - Viernes: 08:00 am - 04:00 pm</span>
+                <h1 class="text-left">Ubicación</h1>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+                        <div id="mapG3" class="mapa"></div>
+                    </div>
+                </div>
+                <!--<br>-->
+                <!--<span id="lblHour3_1" class="text-gris">Sabados - Domingo: 08:00 am - 02:00 pm</span>-->
+                <!--<h1 class="text-left">Tener en cuenta</h1>-->
+                <!--<ul class="plan-trifacico">-->
+                <!--<li>Lorem ipsum dolor sit amet, consectetur.</li>-->
+                <!--<li>Lorem ipsum dolor sit amet, consectetur.</li>-->
+                <!--<li>Lorem ipsum dolor sit amet, consectetur.</li>-->
+                <!--<li>Lorem ipsum dolor sit amet, consectetur.</li>-->
+                <!--<li>Lorem ipsum dolor sit amet, consectetur.</li>-->
+                <!--<li>Lorem ipsum dolor sit amet, consectetur.</li>-->
+                <!--</ul>-->
+            </div>
+
+        </div>
+    </div>
+    <!-- fin contenedor plan trifacico -->
+    <div class="mv-40"></div>
+</div>
+<div id="divContainerNR" class="container mt-10">
+    <div class="container wow fadeInUp" data-wow-delay="1.0s">
+        <div class="row">
+            <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+                <h1 class="text-center text-azul-claro">No hay resultados, por favor vuelva intentar</h1>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Maps  -->
+<script type="text/javascript"
+        src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAcRP48X5xccIDHJgOKupUBumak5mxDeqE"></script>
+<!-- jQuery  -->
+<script type="text/javascript" src="js/jquery-2.1.1.js"></script>
+<!-- Bootstrap -->
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/bootbox.min.js"></script>
+<!-- wow -->
+<script type="text/javascript" src="js/wow.min.js"></script>
+<!-- velocity -->
+<script type="text/javascript" src="js/velocity.min.js"></script>
+<!-- Jquery Mask -->
+<script type="text/javascript" src="js/jquery.mask.min.js"></script>
+<!--Google Maps-->
+<!--<script async defer-->
+        <!--src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAcRP48X5xccIDHJgOKupUBumak5mxDeqE&callback=initialize">-->
+<!--</script>-->
+<!-- Mis Scripts -->
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/config.js"></script>
+<script type="text/javascript" src="scripts/n_trifasico.js"></script>
+<script src="js/main.js"></script>
+    <script type="text/javascript" src="js/config.js"></script>
+    <!-- <script type="text/javascript" src="scripts/c_inicio.js"></script> -->
+    <script type="text/javascript" src="scripts/menu.js"></script>
+</body>
+
+</html>
